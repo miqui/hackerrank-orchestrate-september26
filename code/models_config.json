@@ -1,0 +1,19 @@
+{
+  "models": {
+    "primary": {
+      "slug": "anthropic/claude-haiku-4.5",
+      "role": "primary — image extraction, message classification, explanation synthesis",
+      "input_price_per_million_usd": 1.0,
+      "output_price_per_million_usd": 5.0
+    },
+    "escalation": {
+      "slug": "anthropic/claude-sonnet-5",
+      "role": "escalation — malformed JSON, low confidence, or amount sanity-check failure",
+      "input_price_per_million_usd": 3.0,
+      "output_price_per_million_usd": 15.0
+    }
+  },
+  "api_base": "https://openrouter.ai/api/v1",
+  "api_key_env_var": "OPENROUTER_API_KEY",
+  "notes": "Prices are OpenRouter list prices pinned at the time this file was authored (see evaluation/usage_report.md for the run-time note per R12). No API key is stored here; it is read only from the OPENROUTER_API_KEY environment variable at call time."
+}
